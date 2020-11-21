@@ -16,11 +16,7 @@ router.get('/',function(req,res,next){
           );
           console.log('res ',result);
           res.json(
-              {
-                  //"response": result.rows,
-                  "response": result,
-                  "msg": "200"
-              }
+              result.rows
           );
       //}
   });
