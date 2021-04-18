@@ -56,7 +56,7 @@ Medicamento.getMedicamentoByDosis = function (dosis, result) {
 };
 
 Medicamento.getMedicamentoByPrecio = function (precio, result) {
-    db.query("select * from medicamentos where lower(precio) like lower('%"+precio+"%')",
+    db.query("select * from medicamentos where precio = "+precio,
         function (err, res) {
             if (err) {
                 console.log("error", err);
